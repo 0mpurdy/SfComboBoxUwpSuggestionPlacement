@@ -1,24 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SfComboBoxUwpSuggestionPlacement.MainPage">
+<ContentPage
+    x:Class="SfComboBoxUwpSuggestionPlacement.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+    xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame
+            Padding="24"
+            BackgroundColor="#2196F3"
+            CornerRadius="0">
+            <Label
+                FontSize="36"
+                HorizontalTextAlignment="Center"
+                Text="Welcome to Xamarin.Forms!"
+                TextColor="White" />
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
+        <Label
+            Padding="30,10,30,10"
+            FontSize="Title"
+            Text="Start developing now" />
+        <Label
+            Padding="30,0,30,0"
+            FontSize="16"
+            Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" />
+        <Label Padding="30,24,30,0" FontSize="16">
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        <Span Text="Learn more at " />
+                        <Span FontAttributes="Bold" Text="https://aka.ms/xamarin-quickstart" />
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Label Padding="30" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel ex ac elit porta finibus at et dolor. Pellentesque nulla metus, eleifend vitae rutrum quis, iaculis ut mauris. Sed semper tincidunt odio, quis egestas quam condimentum sed. Nam vitae mauris feugiat, ultricies magna vitae, dignissim ipsum. Etiam metus tellus, venenatis eu lorem vel, bibendum mollis elit. Praesent gravida at felis ut pellentesque. Donec sit amet efficitur nulla. Donec viverra elit nec posuere imperdiet. Integer gravida justo vitae consectetur lacinia. Cras scelerisque nisi vel euismod imperdiet. Cras mauris ex, posuere et lobortis eu, rhoncus vel sapien." />
+        <combobox:SfComboBox
+            x:Name="comboBox"
+            Margin="30,0"
+            HeightRequest="40"
+            SuggestionBoxPlacement="Auto">
+            <combobox:SfComboBox.ComboBoxSource>
+                <ListCollection:List x:TypeArguments="x:String">
+                    <x:String>1920 x 1080</x:String>
+                    <x:String>1680 x 1050</x:String>
+                    <x:String>1600 x 900</x:String>
+                    <x:String>1440 x 900</x:String>
+                    <x:String>1400 x 1050</x:String>
+                    <x:String>1366 x 768</x:String>
+                    <x:String>1360 x 768</x:String>
+                    <x:String>1280 x 1024</x:String>
+                    <x:String>1280 x 960</x:String>
+                    <x:String>1280 x 720</x:String>
+                    <x:String>854 x 480</x:String>
+                    <x:String>800 x 480</x:String>
+                    <x:String>480 X 640</x:String>
+                    <x:String>480 x 320</x:String>
+                    <x:String>432 x 240</x:String>
+                    <x:String>360 X 640</x:String>
+                    <x:String>320 x 240</x:String>
+                </ListCollection:List>
+            </combobox:SfComboBox.ComboBoxSource>
+        </combobox:SfComboBox>
     </StackLayout>
 
 </ContentPage>
